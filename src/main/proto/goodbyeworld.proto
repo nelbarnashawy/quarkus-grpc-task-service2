@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.quarkus.example2";
+option java_outer_classname = "GoodbyeWorldProto";
+
+package goodbyeworld;
+
+service Goodbye {
+  rpc SayGoodbye (GoodbyeRequest) returns (GoodbyeReply) {}
+}
+
+message GoodbyeRequest {
+  string name = 1;
+}
+
+message GoodbyeReply {
+  string message = 1;
+}
